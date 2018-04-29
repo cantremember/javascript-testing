@@ -1,0 +1,22 @@
+{
+  "name": "javascript-testing",
+  "version": "0.0.1",
+  "description": "Various Ways to Test Things in JavaScript",
+  "scripts": {
+    "test": "make quality"
+  },
+  "keywords": [],
+  "author": "Daniel M Foley <admin@cantremember.com> (http://cantremember.com/)",
+  "license": "WTFPL",
+  "esm": {
+    "mode": "strict"
+  },
+  "dependencies": {
+    "esm": "^3.0.28"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "rewire": "^4.0.1",
+    "tape": "^4.9.0"
+  }
+}
