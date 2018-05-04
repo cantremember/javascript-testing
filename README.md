@@ -8,11 +8,11 @@ Because I proselytize that it's good practice to [learn a language through Asser
 ## Frameworks
 
 &#x2605; [tape](https://github.com/substack/tape) <br />
-&#x2606; [mocha](https://github.com/mochajs/mocha) <br />
+&#x2605; [mocha](https://github.com/mochajs/mocha) <br />
 &#x2606; [jest](https://github.com/facebook/jest) <br />
 &#x2606; [ava](https://github.com/avajs/ava) <br />
 
-&#x2606; [chai/expect](https://github.com/chaijs/chai) <br />
+&#x2605; [chai/expect](https://github.com/chaijs/chai) <br />
 &#x2606; [sinon](https://github.com/sinonjs/sinon) <br />
 &#x2605; [rewire](https://github.com/jhnns/rewire) <br />
 
