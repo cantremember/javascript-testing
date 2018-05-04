@@ -1,14 +1,15 @@
 {
   "SublimeLinter": {
+    "// README": "https://github.com/SublimeLinter/SublimeLinter/blob/master/docs/settings.rst#project-settings",
     "linters": {
       "eslint": {
-        "@disable": false
+        "disable": false
       },
       "jscs": {
-        "@disable": true
+        "disable": true
       },
       "jshint": {
-        "@disable": true
+        "disable": true
       }
     }
   },
