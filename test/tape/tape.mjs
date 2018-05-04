@@ -1,6 +1,6 @@
 import tape from 'tape';
 
-import { addTwoNumbers } from '../src/esm';
+import { addTwoNumbers } from '../../src/esm';
 
 
 tape('esm', (assert) => {

@@ -1,6 +1,6 @@
 const tape = require('tape');
 
-const { addTwoNumbers } = require('../src/common');
+const { addTwoNumbers } = require('../../src/common');
 
 
 tape('common', (assert) => {

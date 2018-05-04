@@ -1,7 +1,7 @@
 const tape = require('tape');
 const rewire = require('rewire');
 
-const browser = rewire('../src/browser');
+const browser = rewire('../../src/browser');
 
 
 tape('browser', (assert) => {
