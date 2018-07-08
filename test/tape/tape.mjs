@@ -1,10 +1,12 @@
-import tape from 'tape';
+import test from 'tape';
 
 import { addTwoNumbers } from '../../src/esm';
 
 
-tape('esm', (assert) => {
-  assert.equal(addTwoNumbers(2, 3), 5);
+test('esm', (t) => {
+  t.plan(1);
 
-  assert.end();
+  t.equal(addTwoNumbers(2, 3), 5);
+
+  t.end();
 });
