@@ -1,0 +1,17 @@
+# https://travis-ci.org/
+#   "Legacy Services Integration"
+#   vs. http://travis-ci.com, no free tier
+#   minimum $69/mo for one Container
+
+language: node_js
+node_js:
+  - "8"
+  - "10"
+  - "stable"
+
+script: "make ci"
+
+branches:
+  only:
+    - master
+    - develop
