@@ -5,9 +5,6 @@
       "eslint": {
         "disable": false
       },
-      "jscs": {
-        "disable": true
-      },
       "jshint": {
         "disable": true
       }

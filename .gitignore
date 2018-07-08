@@ -10,4 +10,4 @@ package-lock.json
 Thumbs.db
 
 # Sublime Text
-javascript-testing.sublime-workspace
+*.sublime-workspace
