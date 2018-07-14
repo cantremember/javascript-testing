@@ -12,35 +12,40 @@ MOCHA_OPTIONS = --recursive --ui bdd --timeout 1000
 .DEFAULT_GOAL: quality
 
 
-test:  tape tape-esm mocha mocha-esm jest ava
+test:  tape mocha jest ava
 
 
 # https://github.com/substack/tape
-tape:
-	@NODE_ENV=test $(NODE_BIN)/tape 'test/tape/*.js'
-
+tape-cjs:
+	@NODE_ENV=test $(NODE_BIN)/tape  'test/bootstrap.js' 'test/tape/*.js'
 tape-esm:
-	@NODE_ENV=test $(NODE_BIN)/tape -r esm 'test/tape/*.mjs'
+	@NODE_ENV=test $(NODE_BIN)/tape -r esm  'test/bootstrap.js' 'test/tape/*.mjs'
+tape:  tape-cjs tape-esm
+
 
 # https://mochajs.org/#usage
-mocha:
+mocha-cjs:
 	@NODE_ENV=test $(NODE_BIN)/mocha $(MOCHA_OPTIONS) --reporter nyan \
-		'./test/mocha/*.js'
-
+		'test/bootstrap.js' './test/mocha/*.js'
 mocha-esm:
 	@NODE_ENV=test $(NODE_BIN)/mocha $(MOCHA_OPTIONS) --reporter dot \
 		 -r esm \
-		'./test/mocha/*.mjs'
+		'test/bootstrap.js' './test/mocha/*.mjs'
+mocha:  mocha-cjs mocha-esm
+
 
 # https://jestjs.io/docs/en/cli
 #   @see package.json + { jest }
 jest:
 	@NODE_ENV=test $(NODE_BIN)/jest --config jest.config.js
+# TODO:  ESM variant
+
 
 # https://jestjs.io/docs/en/cli
 #   @see package.json + { ava }
 ava:
 	@NODE_ENV=test $(NODE_BIN)/ava
+# TODO:  ESM variant
 
 
 lint:
@@ -59,7 +64,7 @@ quality:  test lint
 #     at Function.Module._load (internal/modules/cjs/loader.js:530:3)
 #     at Module.require (internal/modules/cjs/loader.js:637:17)
 # ```
-ci:  tape mocha jest ava  lint
+ci:  tape-cjs mocha-cjs jest ava  lint
 
 
 lock:

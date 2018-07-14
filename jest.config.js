@@ -22,7 +22,16 @@ module.exports = {
   ],
 
   // // opinionated: go with 'test/__tests__'
-  // roots: [ '<rootDir>/test/jest' ],
+  // roots: [
+  //   'test',
+  //   '<rootDir>/test/jest',
+  // ],
+
+  // seems to run AFTER the Tests execute
+  setupFiles: [
+    './test/bootstrap.js',
+  ],
+  // setupTestFrameworkScriptFile: './test/bootstrap.js',
 
   // // not sure how this helps us at all
   // moduleFileExtensions: [ 'js', 'mjs', 'jsx' ],
@@ -35,6 +44,9 @@ module.exports = {
   // // opinionated: always showed a notification on success :(
   // notify: true,
   // notifyMode: 'failure',
+  roots: [
+    'test',
+  ],
   runner: 'jest-runner',
   testRunner: 'jasmine2',
   timers: 'real',

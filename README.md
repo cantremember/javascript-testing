@@ -18,6 +18,7 @@ Because I proselytize that it's good practice to [learn a language through Asser
 &#x2605; [chai/expect](https://github.com/chaijs/chai) <br />
 &#x2605; [sinon](https://github.com/sinonjs/sinon) <br />
 &#x2605; [rewire](https://github.com/jhnns/rewire) <br />
+&#x2605; [mock-require](https://github.com/boblauer/mock-require) <br />
 
 &#x2605; [eslint](https://github.com/eslint/eslint) <br />
 
