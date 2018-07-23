@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const querystring = require('querystring');
 
 
 const app = express();
@@ -37,6 +36,7 @@ app.get('/json', (req, res) => {
 app.post('/echo', (req, res) => {
   const contentType = req.headers['content-type'];
   res.set('content-type', contentType);
+
 
   // respond with a JSON String regardless of Content-Type
   res.status(200).send({
