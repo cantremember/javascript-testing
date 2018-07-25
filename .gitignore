@@ -3,8 +3,6 @@ node_modules/
 .node_modules
 npm-debug.log
 
-package-lock.json
-
 # ignore Apple DS Store
 *.DS_Store
 Thumbs.db
