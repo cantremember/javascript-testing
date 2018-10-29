@@ -1,15 +1,24 @@
-NODE_BIN = ./node_modules/.bin
+ROOT = $(shell pwd)
+NODE_BIN = $(ROOT)/node_modules/.bin
 
 MOCHA_OPTIONS = --recursive --ui bdd --timeout 1000
 
 
 .PHONY: \
+	init post-install \
 	test  tape tape-esm mocha mocha-esm jest ava \
 	lint \
 	quality ci \
 	lock
 
 .DEFAULT_GOAL: quality
+
+
+init:
+	@mkdir -p $(ROOT)/build/mongodb
+
+post-install:  init
+	@node -r esm  $(ROOT)/bin/post-install.mjs
 
 
 test:  tape mocha jest ava
@@ -26,11 +35,11 @@ tape:  tape-cjs tape-esm
 # https://mochajs.org/#usage
 mocha-cjs:
 	@NODE_ENV=test $(NODE_BIN)/mocha $(MOCHA_OPTIONS) --reporter nyan \
-		'test/bootstrap.js' './test/mocha/*.js'
+		"$(ROOT)/test/bootstrap.js" "$(ROOT)/test/mocha/*.js"
 mocha-esm:
 	@NODE_ENV=test $(NODE_BIN)/mocha $(MOCHA_OPTIONS) --reporter dot \
 		 -r esm \
-		'test/bootstrap.js' './test/mocha/*.mjs'
+		"$(ROOT)/test/bootstrap.js" "$(ROOT)/test/mocha/*.mjs"
 mocha:  mocha-cjs mocha-esm
 
 
