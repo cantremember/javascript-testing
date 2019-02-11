@@ -19,11 +19,19 @@ test('t methods', (t) => {
   t.notRegex('NO', YESSY);
 });
 
+
+test.todo('not tested yet');
+
+test.skip('not executed', (t) => {
+  t.fail();
+});
+
 test.failing('t.fail', (t) => {
   t.plan(1);
 
   t.fail('FAILS');
 });
+
 
 test('t.throws', async (t) => {
   t.plan(4);
@@ -39,7 +47,7 @@ test('t.throws', async (t) => {
   async function rejecting() { // eslint-disable-line require-await
     return Promise.reject(ERROR);
   }
-  const err = await t.throws(rejecting, 'BOOM');
+  const err = await t.throwsAsync(rejecting, 'BOOM');
   t.is(err.message, 'BOOM');
 });
 

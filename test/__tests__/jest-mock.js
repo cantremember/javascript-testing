@@ -28,7 +28,7 @@ it('spies', () => {
   expect(mock.calls.length).toBe(1);
   expect(mock.calls[0]).toEqual([ ARG ]);
   expect(mock.results[0]).toEqual({
-    isThrow: false,
+    type: 'return',
     value: 'spyable',
   });
 });

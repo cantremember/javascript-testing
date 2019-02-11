@@ -23,7 +23,13 @@ Because I proselytize that it's good practice to [learn a language through Asser
 &#x2605; [rewire](https://github.com/jhnns/rewire) <br />
 &#x2605; [mock-require](https://github.com/boblauer/mock-require) <br />
 
+&#x2606; [nock](https://github.com/nock/nock) <br />
+&#x2606; [node-mocks-http](https://github.com/howardabrams/node-mocks-http) <br />
+
+&#x2606; [mock-fs](https://github.com/tschaub/mock-fs) <br />
+
 &#x2605; [eslint](https://github.com/eslint/eslint) <br />
+&#x2605; [husky](https://github.com/typicode/husky) <br />
 
 
 [travis-img]: https://img.shields.io/travis/cantremember/javascript-testing.svg?style=flat-square

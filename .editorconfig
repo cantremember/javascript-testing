@@ -1,20 +1,37 @@
-# EditorConfig is awesome: http://EditorConfig.org
+# Look for an EditorConfig plugin for your tool of choice,
+# or you might not be able to commit code ;)
 
-# top-most EditorConfig file (~/.editorconfig)
+# http://editorconfig.org
+
+# top-most EditorConfig file, as we could have one per folder
 root = true
 
-[{*.js,*.mjs}]
-indent_style = space
-indent_size = 2
-end_of_line = lf
+# All files
+# - use UTF-8
+# - use Unix-style newlines with a newline ending every file
+# - indent by spaces
+# - get whitespace-trimmed
+[*]
 charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
 trim_trailing_whitespace = true
-insert_final_newline = false
 
-[*.json]
+# Make
+[Makefile]
+indent_size = 4
+indent_style = tab
+
+# JavaScript, JSON
+[*.{js,mjs,json}]
+indent_size = 2
+
+# YAML
+[*.{yaml,yml}]
 indent_style = space
 indent_size = 2
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = false
+
+; Markdown
+[*.md]
+indent_size = 2
