@@ -46,7 +46,7 @@
     "// HOOKS": "https://git-scm.com/docs/githooks",
     "// ENV": "HUSKY_SKIP_INSTALL=true",
     "hooks": {
-      "pre-commit": "make test"
+      "pre-commit": "make quality"
     }
   },
   "dependencies": {
