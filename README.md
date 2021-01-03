@@ -1,6 +1,6 @@
 # Various Ways to Test Things in JavaScript
 
-  [![Build status][travis-img]][travis-url]
+  [![Build status][githubactions-img]][githubactions-url]
   [![License][license-img]][license-url]
 
 Born from my Mentoriship experience at [NodeSchool SF](https://github.com/nodeschool/sanfrancisco/issues/239).
@@ -31,8 +31,7 @@ Because I proselytize that it's good practice to [learn a language through Asser
 &#x2605; [eslint](https://github.com/eslint/eslint) <br />
 &#x2605; [husky](https://github.com/typicode/husky) <br />
 
-
-[travis-img]: https://img.shields.io/travis/cantremember/javascript-testing.svg?style=flat-square
-[travis-url]: https://travis-ci.org/cantremember/javascript-testing
+[githubactions-img]: https://github.com/cantremember/javascript-testing/workflows/CI/badge.svg
+[githubactions-url]: https://github.com/cantremember/javascript-testing/actions
 [license-img]: https://img.shields.io/badge/license-WTFPL-blue.svg?style=flat-square
 [license-url]: http://www.wtfpl.net/

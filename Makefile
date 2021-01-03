@@ -64,16 +64,11 @@ lint:
 
 quality:  test lint
 
-# can't test any of the ESM files under Travis CI
-# ```
-# /Users/travis/build/cantremember/javascript-testing/test/tape/tape.mjs:1
-# Error [ERR_REQUIRE_ESM]: Must use import to load ES module: file:///Users/travis/build/cantremember/javascript-testing/test/tape/tape.mjs
-#     at Module.load (internal/modules/cjs/loader.js:599:32)
-#     at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
-#     at Function.Module._load (internal/modules/cjs/loader.js:530:3)
-#     at Module.require (internal/modules/cjs/loader.js:637:17)
-# ```
-ci:  tape-cjs mocha-cjs jest ava  lint
+# # no *-esm tests
+# ci:  tape-cjs mocha-cjs jest ava  lint
+# # all the good stuff
+# ci:  test lint
+ci:  quality
 
 
 lock:

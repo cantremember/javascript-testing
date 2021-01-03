@@ -1,0 +1,53 @@
+# https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions
+# https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
+
+name: CI
+
+on: [ push ]
+
+jobs:
+  build-and-test:
+    name: "Build and Test"
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version:
+          # NO:  'stable'
+          # NO:  from 'dist-tags'; 'v8-lts'
+          - 8
+          - 10
+          - 12
+          - 14
+      # be polite
+      max-parallel: 2
+      # be thorough
+      fail-fast: false
+
+    steps:
+
+    # - name: OS Packages
+    #   run: >
+    #     sudo apt-get update;
+
+    - uses: actions/checkout@v2
+
+    - name: Use Node ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: "${{ matrix.node-version }}"
+        # NOTE:  unnecessary; future reference
+        check-latest: true
+        architecture: x64
+
+    - name: Install
+      run: >
+        npm install;
+        cat node_modules/mongodb-sandbox/package.json;
+
+    - name: CI
+      run: >
+        make ci
+      # NOTE:  unnecessary; future reference
+      env:
+        NODE_ENV: test
