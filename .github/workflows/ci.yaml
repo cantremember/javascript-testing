@@ -42,8 +42,7 @@ jobs:
 
     - name: Install
       run: >
-        npm install;
-        cat node_modules/mongodb-sandbox/package.json;
+        npm install
 
     - name: CI
       run: >
