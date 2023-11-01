@@ -10,10 +10,13 @@ Because I proselytize that it's good practice to [learn a language through Asser
 
 ## Frameworks
 
+> Narrator:  *He would never do any of this.*
+
 &#x2605; [tape](https://github.com/substack/tape) <br />
 &#x2605; [mocha](https://github.com/mochajs/mocha) <br />
 &#x2605; [jest](https://github.com/facebook/jest) <br />
 &#x2605; [ava](https://github.com/avajs/ava) <br />
+&#x2606; [nyc](https://github.com/istanbuljs/nyc) <br />
 
 &#x2605; [chai/expect](https://github.com/chaijs/chai) <br />
 &#x2605; [sinon](https://github.com/sinonjs/sinon) <br />
@@ -29,6 +32,7 @@ Because I proselytize that it's good practice to [learn a language through Asser
 &#x2606; [mock-fs](https://github.com/tschaub/mock-fs) <br />
 
 &#x2605; [eslint](https://github.com/eslint/eslint) <br />
+&#x2606; [prettier](https://github.com/prettier/prettier) <br />
 &#x2605; [husky](https://github.com/typicode/husky) <br />
 
 [githubactions-img]: https://github.com/cantremember/javascript-testing/workflows/CI/badge.svg
